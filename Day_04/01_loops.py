@@ -104,3 +104,5 @@ sEmoji = input("Please tell the pattern?: ")
 
 for i in range(1, iRows + 1):
     print(sEmoji * i)
+
+# This is nice line added 🍧

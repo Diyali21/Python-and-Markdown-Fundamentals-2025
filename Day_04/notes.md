@@ -85,3 +85,5 @@ for i in range(3):
 4. `range(3) ➡️ range(end)`
 5. `for` and `range` takes care of `incrementing 'i'`
 6. step ➡️ default is `1`
+
+## Intro to Git
