@@ -89,6 +89,10 @@ for i in range(3):
 ## Intro to Git
 
 - Commit at least 3 times in an hour - Logical changes - commit
+- Version control for your project
+- Be confident with your change
+- Linus Torvalds - side project made Git to maintain Linus - 2007
+- Git - Does not need internet | On plane
 
 1. git init
 2. Stage all
@@ -97,4 +101,10 @@ for i in range(3):
    1. Commit at least 3 times in an hour
    2. Logical commit - Complete commit (No bugs)
    3. Small commit - Don't commit > 10 files
-5. Sync to github (online)
+5. Commit (Save point)
+6. Sync to github (online)
+
+### Git vs Github
+
+- `Git` - Version control system - Does not need internet
+- `Github` - like GoogleDrive (Storing files)
