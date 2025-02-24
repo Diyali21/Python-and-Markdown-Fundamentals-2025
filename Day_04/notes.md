@@ -87,3 +87,10 @@ for i in range(3):
 6. step ➡️ default is `1`
 
 ## Intro to Git
+
+- Commit at least 3 times in an hour - Logical changes - commit
+
+1. git init
+2. Stage all
+3. Provide message - Why? > What?
+4. Sync to github (online)
