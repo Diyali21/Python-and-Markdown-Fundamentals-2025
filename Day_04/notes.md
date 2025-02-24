@@ -108,3 +108,11 @@ for i in range(3):
 
 - `Git` - Version control system - Does not need internet
 - `Github` - like GoogleDrive (Storing files)
+
+## .ipynb
+
+Interactive Python Notebook
+
+## venv
+
+Why? Acts as a shield from Bad global python updates
