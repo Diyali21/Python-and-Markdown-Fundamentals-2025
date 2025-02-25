@@ -106,3 +106,18 @@ for i in range(1, iRows + 1):
     print(sEmoji * i)
 
 # This is nice line added 🍧
+shopping_items = [1000, 5000, 4000, 2000, 3000]
+sum_items = 0
+
+for item in shopping_items:
+    sum_items = sum_items + item
+
+tax = sum_items * 0.1
+total = sum_items + tax
+print(
+    f"""
+Your total is R{sum_items})
+Tax is 10%   R{tax}
+Your grand total is R{total}
+"""
+)
