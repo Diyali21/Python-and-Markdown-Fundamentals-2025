@@ -116,3 +116,26 @@ Interactive Python Notebook
 ## venv
 
 Why? Acts as a shield from Bad global python updates
+
+## Setup
+
+1. `uv venv`
+2. `uv pip install ipykernel`
+
+## Common Methods
+
+### **List & String**
+
+1. Slice
+2. Index: +ve, -ve
+3. Len
+4. Count
+5. Concatenation (+)
+6. Repetition (\*)
+
+## CRUD - List
+
+1. Read - `index & slice`
+2. Update - `append & insert`
+3. Delete - `remove & pop`
+4. Create - `[]`
