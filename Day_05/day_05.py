@@ -12,8 +12,17 @@
 # print(unscrambled_str)
 
 
-playlist = "🎵Dancing Queen;🎸Sweet Child O' Mine;🎹Piano Man;🎤Bohemian Rhapsody;🎺All That Jazz"
-playlist_list = playlist.split(";")
-print("My favorite playlist:")
-for i in range(len(playlist_list)):
-    print(f"{i + 1}. {playlist_list[i]}")
+import math
+
+points = [(3, 4), (6, 12), (10, 13)]
+
+# Expected Output
+# distances = [5.0, 13.42, 16.4]
+
+distances = []
+
+for point in points:
+    a, b = point
+    d = math.sqrt(a**2 + b**2)
+    distances.append(round(d, 2))
+print(distances)
