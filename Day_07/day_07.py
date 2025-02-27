@@ -60,3 +60,44 @@
 # for color in colors:
 #     c.add(color)
 # print(c)
+
+
+guests = [
+    {"name": "Alice", "age": 25, "code": "VIP123"},
+    {"name": "Bob", "age": 17, "code": "VIP123"},
+    {"name": "Charlie", "age": 30, "code": "VIP123"},
+    {"name": "Dave", "age": 22, "code": "GUEST"},
+    {"name": "Eve", "age": 29, "code": "VIP123"},
+]
+
+
+blacklist = ["Dave", "Eve"]
+
+# Task
+# People who are 21 or above and VIP123
+# Blacklist are not allowed
+
+
+PASS_CODE = "VIP123"
+
+guestlist = []  # ?
+
+# for guest in guests:
+#     if (
+#         guest["age"] >= 21
+#         and guest["code"] == "VIP123"
+#         and guest["name"] not in blacklist
+#     ):
+#         guestlist.append(guest["name"])
+# print(guestlist)
+
+
+print(
+    [
+        guest["name"]
+        for guest in guests
+        if guest["age"] >= 21
+        and guest["code"] == "VIP123"
+        and guest["name"] not in blacklist
+    ]
+)
