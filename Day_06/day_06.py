@@ -111,10 +111,47 @@
 
 # Task - With List Comp
 
-nums = [7, 44, 90, 6, 75, 10]
+# nums = [7, 44, 90, 6, 75, 10]
 
-# Output
-# ["Odd", "Even", "Even", "Even", "Odd", "Even"]
+# # Output
+# # ["Odd", "Even", "Even", "Even", "Odd", "Even"]
 
 
-print(["Odd" if num % 2 != 0 else "Even" for num in nums])
+# print(["Odd" if num % 2 != 0 else "Even" for num in nums])
+
+
+# - Prompt for the product name, additional quantity, and new price.
+# - Loop through the inventory; if the product exists, update its quantity and price.
+
+# **Example Scenario:**
+
+# - **Initial Inventory:**
+
+# inventory = [
+#     {"name": "Apple 🍎", "quantity": 30, "price": 0.5},
+#     {"name": "Banana 🍌", "quantity": 20, "price": 0.2},
+# ]
+
+# # - **User Input:**
+# #   ```
+# #   Enter product name to update: Apple 🍎
+# #   Enter additional quantity: 40
+# #   Enter new price: 0.4
+# #   ```
+# # - **Expected Output:**
+# #   ```
+# #   Updated Apple 🍎 successfully! 🎉
+# #   Updated Inventory: [{'name': 'Apple 🍎', 'quantity': 70, 'price': 0.4}, {'name': 'Banana 🍌', 'quantity': 20, 'price': 0.2}]
+
+
+# name = input("Enter product name to update: ")
+# qty = int(input("Enter additional quantity: "))
+# price = float(input("Enter new price: "))
+
+# for product in inventory:
+#     product_name = product.get("name")
+#     if name == product_name:
+#         print(f"Updated {product['name']} successfully! 🎉")
+#         product["quantity"] += qty
+#         product["price"] = price
+# print(f"Updated Inventory: {inventory}")
