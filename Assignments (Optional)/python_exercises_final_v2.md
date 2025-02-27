@@ -1,6 +1,7 @@
 # 🐍 Python Day 2 Exercises 🚀
 
-## 1. Name Tag Generator (Difficulty: 1)
+## 1. Name Tag Generator (Difficulty: 1) ✔️
+
 <details>
 <summary>Topics</summary>
 
@@ -17,6 +18,7 @@ name = input("Enter your name: ")
 ```
 
 **Expected Output:**
+
 ```
 Enter your name: Maria
 ✨ Hello, MARIA! ✨
@@ -27,6 +29,7 @@ Enter your name: Maria
 ---
 
 ## 2. Age Calculator (Difficulty: 1)
+
 <details>
 <summary>Topics</summary>
 
@@ -44,6 +47,7 @@ current_year = 2025
 ```
 
 **Expected Output:**
+
 ```
 Enter birth year: 2000
 You are 25 years old in 2025.
@@ -52,6 +56,7 @@ You are 25 years old in 2025.
 ---
 
 ## 3. Emoji Replacer (Difficulty: 2)
+
 <details>
 <summary>Topics</summary>
 
@@ -69,6 +74,7 @@ sentence = input("Enter a sentence: ")
 ```
 
 **Expected Output:**
+
 ```
 Case 1:
 Enter a sentence: I love coding and pizza
@@ -82,6 +88,7 @@ The weather is nice today
 ---
 
 ## 4. Tip Calculator (Difficulty: 2)
+
 <details>
 <summary>Topics</summary>
 
@@ -99,6 +106,7 @@ service = input("Service (poor/fair/good/excellent): ").lower()
 ```
 
 **Expected Output:**
+
 ```
 Case 1:
 Bill amount: $45.50
@@ -116,6 +124,7 @@ Total: $110.00
 ---
 
 ## 5. Temperature Converter (Difficulty: 2)
+
 <details>
 <summary>Topics</summary>
 
@@ -133,6 +142,7 @@ unit = input("Convert from (C/F): ").upper()
 ```
 
 **Expected Output:**
+
 ```
 Case 1:
 Enter temperature: 30
@@ -148,6 +158,7 @@ Convert from (C/F): F
 ---
 
 ## 6. BMI Calculator (Difficulty: 2)
+
 <details>
 <summary>Topics</summary>
 
@@ -165,6 +176,7 @@ height = float(input("Enter height (m): "))
 ```
 
 **Expected Output:**
+
 ```
 Case 1:
 Enter weight (kg): 70
@@ -182,6 +194,7 @@ Your BMI: 31.14 (Obese)
 ---
 
 ## 7. Coin Toss Simulator (Difficulty: 2)
+
 <details>
 <summary>Topics</summary>
 
@@ -198,6 +211,7 @@ import random
 ```
 
 **Expected Output:**
+
 ```
 Flipping a coin...
 Result: 🪙 Heads!
@@ -206,6 +220,7 @@ Result: 🪙 Heads!
 ---
 
 ## 8. Password Generator (Difficulty: 3)
+
 <details>
 <summary>Topics</summary>
 
@@ -225,6 +240,7 @@ length = int(input("Password length: "))
 ```
 
 **Expected Output:**
+
 ```
 Case 1:
 Password length: 8
@@ -238,6 +254,7 @@ Generated password: R5!a
 ---
 
 ## 9. Text Analyzer (Difficulty: 3)
+
 <details>
 <summary>Topics</summary>
 
@@ -257,6 +274,7 @@ text = input("Enter text: ")
 ```
 
 **Expected Output:**
+
 ```
 Case 1:
 Enter text: Python is fun to learn!
@@ -274,6 +292,7 @@ Average word length: 11.0
 ---
 
 ## 10. Emoji Mood Detector (Difficulty: 3)
+
 <details>
 <summary>Topics</summary>
 
@@ -291,6 +310,7 @@ message = input("Enter your message: ")
 ```
 
 **Expected Output:**
+
 ```
 Case 1:
 Enter your message: Today was great 😊
@@ -304,6 +324,7 @@ Mood detected: Mixed feelings 🤔
 ---
 
 ## 11. Countdown Timer (Difficulty: 3)
+
 <details>
 <summary>Topics</summary>
 
@@ -322,6 +343,7 @@ count = int(input("Start countdown from: "))
 ```
 
 **Expected Output:**
+
 ```
 Start countdown from: 3
 3... 🕐
@@ -333,6 +355,7 @@ Start countdown from: 3
 ---
 
 ## 12. Grade Calculator (Difficulty: 4)
+
 <details>
 <summary>Topics</summary>
 
@@ -349,6 +372,7 @@ score = float(input("Enter test score (0-100): "))
 ```
 
 **Expected Output:**
+
 ```
 Case 1:
 Enter test score (0-100): 87
@@ -366,6 +390,7 @@ Score: 95 = A
 ---
 
 ## 13. Currency Converter (Difficulty: 4)
+
 <details>
 <summary>Topics</summary>
 
@@ -387,6 +412,7 @@ to_currency = input("To currency (USD/EUR/GBP/JPY): ").upper()
 ```
 
 **Expected Output:**
+
 ```
 Case 1:
 Amount: 100
@@ -404,6 +430,7 @@ To currency (USD/EUR/GBP/JPY): JPY
 ---
 
 ## 14. Word Guessing Game (Difficulty: 4)
+
 <details>
 <summary>Topics</summary>
 
@@ -424,6 +451,7 @@ max_attempts = 5
 ```
 
 **Expected Output:**
+
 ```
 I'm thinking of a 5-letter word.
 Guess 1: slate
@@ -441,6 +469,7 @@ Correct! The word was SOLAR ⭐
 ---
 
 ## 15. Personal Finance Tracker (Difficulty: 5)
+
 <details>
 <summary>Topics</summary>
 
@@ -460,6 +489,7 @@ income = float(input("Enter your monthly income: $"))
 ```
 
 **Expected Output:**
+
 ```
 Case 1:
 Enter your monthly income: $3000
