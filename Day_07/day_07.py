@@ -21,6 +21,42 @@
 
 # {"1": 1, "2": 4, "3": 9, "4": 16, "5": 25}
 
-for i in range(1, 6):
-    square = {f"{i}": i * i}
-    print(square)
+# for i in range(1, 6):
+#     square = {f"{i}": i * i}
+#     print(square)
+
+# num = [{i: "odd" if i % 2 != 0 else "even"} for i in range(1,11)]
+
+# fruits = {"apple": 1.2, "banana": 2.5, "orange": 3.0, "kiwi": 4.0}
+
+# fruits_above_two = {key: val for key, val in fruits.items() if val > 2}
+# print(fruits_above_two)
+
+# employees = [
+#     {"id": 101, "name": "Alice", "age": 30},
+#     {"id": 102, "name": "Bob", "age": 25},
+#     {"id": 103, "name": "Charlie", "age": 35},
+# ]
+
+# emp = {
+#     employee["id"]: employee["age"] for employee in employees if employee["age"] > 28
+# }
+
+# print(emp)
+
+
+# Task
+# Remove the duplicates
+# colors = ["🔴 red", "🔵 blue", "🔴 red", "🟢 green", "💗 pink", "🔵 blue"]
+
+
+# "🔴 red", "🔵 blue", "🟢 green", "💗 pink"
+
+# # Easy
+# print(set(colors))
+
+# # Hard
+# c = set()
+# for color in colors:
+#     c.add(color)
+# print(c)
