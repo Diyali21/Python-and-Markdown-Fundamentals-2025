@@ -32,3 +32,6 @@ books = [
 # print(title_str)
 # output = title_str.replace(", and,", " and")
 # print(f"Highest rated books are: {output}")
+ice_creams = "mint|chocolate|vanilla"
+
+print(ice_creams.split("o"))
