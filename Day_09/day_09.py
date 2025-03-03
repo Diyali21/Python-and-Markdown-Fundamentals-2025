@@ -11,55 +11,87 @@
 # print(own_max(3, 4, 5, 6, 7, 2, 3, 10, 1))
 
 
-def mood_report(mood="🙂", time_of_day="🌅"):
-    return f"Feeling {mood} this {time_of_day}"
+# def mood_report(mood="🙂", time_of_day="🌅"):
+#     return f"Feeling {mood} this {time_of_day}"
 
 
-# Example outputs:
-print(mood_report())  # "Feeling 🙂 this morning 🌅."
-print(
-    mood_report(mood="😎", time_of_day="afternoon ☀️")
-)  # "Feeling 😎 this afternoon ☀️."
+# # Example outputs:
+# print(mood_report())  # "Feeling 🙂 this morning 🌅."
+# print(
+#     mood_report(mood="😎", time_of_day="afternoon ☀️")
+# )  # "Feeling 😎 this afternoon ☀️."
 
-# Task 1.2
+# # Task 1.2
 
-books = [
-    {"title": "1984", "author": "George Orwell", "year": 1949},
-    {"author": "J.K. Rowling"},  # Missing title and year
-    {"title": "The Great Gatsby", "author": "F. Scott Fitzgerald", "year": 1925},
-    {"title": "To Kill a Mockingbird", "year": 1960},  # Missing author
-    {"author": "Ernest Hemingway", "year": 1952},  # Missing title
-]
-
-
-# Output
-# '1984' by George Orwell (1949)
-# 'Untitled' by J.K. Rowling (N/A)
-# 'The Great Gatsby' by F. Scott Fitzgerald (1925)
-# 'To Kill a Mockingbird' by Unknown (1960)
-# 'Untitled' by Ernest Hemingway (1952)
+# books = [
+#     {"title": "1984", "author": "George Orwell", "year": 1949},
+#     {"author": "J.K. Rowling"},  # Missing title and year
+#     {"title": "The Great Gatsby", "author": "F. Scott Fitzgerald", "year": 1925},
+#     {"title": "To Kill a Mockingbird", "year": 1960},  # Missing author
+#     {"author": "Ernest Hemingway", "year": 1952},  # Missing title
+# ]
 
 
-def format_book_info1(book):
-    title = book.get("title", "Untitled")
-    author = book.get("author", "Unknown")
-    year = book.get("year", "N/A")
-    return f"'{title}' by {author} ({year})"
+# # Output
+# # '1984' by George Orwell (1949)
+# # 'Untitled' by J.K. Rowling (N/A)
+# # 'The Great Gatsby' by F. Scott Fitzgerald (1925)
+# # 'To Kill a Mockingbird' by Unknown (1960)
+# # 'Untitled' by Ernest Hemingway (1952)
 
 
-def format_book_info2(
-    title="Untitled", author="Unknown", year="N/A"
-):  # title -> If None then default value
-    return f"'{title}' by {author} ({year})"
+# def format_book_info1(book):
+#     title = book.get("title", "Untitled")
+#     author = book.get("author", "Unknown")
+#     year = book.get("year", "N/A")
+#     return f"'{title}' by {author} ({year})"
 
 
-def main():
-    for book in books:
-        print(
-            format_book_info2(
-                book.get("title"), book.get("author"), book.get("year")
-            )  # doesn't work
-        )
+# def format_book_info2(
+#     title="Untitled", author="Unknown", year="N/A"
+# ):  # title -> If None then default value
+#     return f"'{title}' by {author} ({year})"
 
 
-main()
+# def main():
+#     for book in books:
+#         print(
+#             format_book_info2(
+#                 book.get("title"), book.get("author"), book.get("year")
+#             )  # doesn't work
+#         )
+
+
+# main()
+
+
+recipe = {
+    "name": "Spaghetti Carbonara",
+    "servings": 4,
+    "ingredients": [
+        "200g spaghetti",
+        "100g pancetta",
+        "2 eggs",
+        "1/2 cup grated Parmesan",
+        "1 clove garlic",
+    ],
+}
+
+# Task 1
+# ======= Spaghetti Carbonara =======
+# - 200g spaghetti
+# - 100g pancetta
+# - 2 eggs
+# - 1/2 cup grated Parmesan
+# - 1 clove garlic
+# Serves: 4 people
+
+
+def format_recipe_output(name, ingredients, servings):
+    str = ""
+    for ingredient in ingredients:
+        str = str + f"\n- {ingredient}"
+    return f"{' ' + name + ' ':=^34}" + str + f"\nServes: {servings} people"
+
+
+print(format_recipe_output(**recipe))
