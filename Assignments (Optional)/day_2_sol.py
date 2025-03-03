@@ -94,4 +94,12 @@ emoji_dict = {"love": "❤️", "pizza": "🍕", "happy": "😊"}
 sentence = input("Enter a sentence: ")
 
 emoji_list = sentence.split(" ")
-print(emoji_list)
+
+keys_str = ""
+
+for keys in emoji_dict.keys():
+    keys_str = keys_str + keys + " "
+
+for i in range(len(sentence)):
+    if sentence[i] in keys_str[i]:
+        print("hi")
