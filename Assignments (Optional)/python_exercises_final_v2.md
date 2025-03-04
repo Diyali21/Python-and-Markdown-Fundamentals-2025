@@ -28,7 +28,7 @@ Enter your name: Maria
 
 ---
 
-## 2. Age Calculator (Difficulty: 1)
+## 2. Age Calculator (Difficulty: 1) ✔️
 
 <details>
 <summary>Topics</summary>
