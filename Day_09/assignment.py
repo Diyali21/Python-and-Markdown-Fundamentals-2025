@@ -24,18 +24,14 @@ def print_invoice(invoice_date, items):
     print(f"{'Product':<21} {'Qty':<7} {'Unit Price':<19} {'Total'}")
 
     print(f"{'-':-<55}")
+
     grand_total = 0
     for item in items:
         name = item["name"]
-
         qty = item["quantity"]
-
         up = item["price"]
-
         total = qty * up
-
         grand_total = grand_total + total
-
         print(f"{name:<22} {qty:<11} {up:<14} {total:.2f}")
 
     print(f"{'-':-<55}")
