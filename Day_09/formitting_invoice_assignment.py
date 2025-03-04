@@ -38,5 +38,6 @@ def print_invoice(invoice_date, items):
     print(f"{'Grand Total':<50}{grand_total}")
 
 
-invoice_date = input("Enter invoice date: ")
+invoice_date_str = input("Enter date in 'YYYY-MM-DD' format: ")
+invoice_date = datetime.strptime(invoice_date_str, "%Y-%m-%d")
 print_invoice(invoice_date, items)
