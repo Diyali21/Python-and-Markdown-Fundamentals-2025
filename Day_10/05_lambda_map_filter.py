@@ -62,7 +62,7 @@ print(boosted_stats, list(boosted_stats))
 # result = filter(lambda x: x > 10, [10, 30, 60])
 # print(result, list(result))
 
-gt1 = lambda x: x > 10  # Predicate: Returns boolean
+gt1 = lambda x: x > 10  # Predicate: fn Returns boolean
 result = filter(gt1, [10, 30, 60])
 print(result, list(result))
 
@@ -70,3 +70,23 @@ print(result, list(result))
 # gt1(30) -> T
 # gt1(60) -> T
 # [30, 60]
+
+player_stats = [10, 30, 60]
+boosted_stats = map(lambda x: x * 2, player_stats)
+print(boosted_stats, list(boosted_stats))
+print(player_stats)
+
+# map
+# 1. len(Input_list) == len(Output_list)
+# 2. Transform data type
+# 3. Does not affect the Input list
+
+player_stats = [10, 30, 60]
+result = filter(gt1, player_stats)
+print(result, list(result))
+print(player_stats)
+
+# filter
+# 1. len(Input_list) >= len(Output_list)
+# 2. Input data_type == Output data_type
+# 3. Does not affect the Input list
