@@ -1,4 +1,3 @@
-from ctypes import sizeof
 from datetime import datetime
 
 items = [
@@ -7,6 +6,7 @@ items = [
     {"name": "Gadget", "quantity": 2, "price": 99.99},
 ]
 
+# Output
 # Invoice Date: 03 March 2025
 
 # Product               Qty     Unit Price          Total
@@ -38,4 +38,5 @@ def print_invoice(invoice_date, items):
     print(f"{'Grand Total':<50}{grand_total}")
 
 
-print_invoice(datetime.now(), items)
+invoice_date = input("Enter invoice date: ")
+print_invoice(invoice_date, items)
