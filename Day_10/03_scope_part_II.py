@@ -120,17 +120,46 @@
 
 
 # Case 5:
-price = 200
+# price = 200
 
 
-def get_price(price):
-    print("The old price is: ", price)
-    price = 100  # Reassignment
-    print("The new price is: ", price)
+# def get_price(price):
+#     print("The old price is: ", price)
+#     price = 100  # Reassignment
+#     print("The new price is: ", price)
 
 
-get_price(600)
+# get_price(600)
 
 # Summary
 # 1. Local gets perfernce
 # 2. UnboundLocalError -> If you try access before declaration
+# 3. Only functions create new scope
+
+# Case 1:
+# t1 = True
+
+# if t1:
+#     x = "abc"
+
+# print(x)
+
+
+# Case 2:
+
+
+# def cool():
+#     t1 = True
+
+#     if t1:
+#         x = "abc"
+
+
+# cool()
+# print(x)
+
+
+# Assignment:
+# Write a comparison in terms of scope on keywords
+# global vs nonlocal
+# with examples

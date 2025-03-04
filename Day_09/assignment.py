@@ -19,7 +19,7 @@ items = [
 
 
 def print_invoice(invoice_date, items):
-    print(f"Invoice Date: {invoice_date} \n\n")
+    print(f"Invoice Date: {invoice_date:%d %B %Y} \n\n")
 
     print(f"{'Product':<21} {'Qty':<7} {'Unit Price':<19} {'Total'}")
 
