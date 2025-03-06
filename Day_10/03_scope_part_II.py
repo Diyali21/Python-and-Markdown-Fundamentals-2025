@@ -1,10 +1,12 @@
-# price = 100
+price = 100
+
+
 # Case 1:
-# def get_price():
-#     print("The price of the book is: ", price)
+def get_price():
+    print("The price of the book is: ", price)
 
 
-# get_price()
+get_price()
 
 # # get_price
 # 1. First checks for local `price` variable
@@ -12,19 +14,19 @@
 
 # Case 2:
 
-# price = 200
+price = 200
 
 
-# def get_price():
-#     print("The old price is: ", price)  # 200
-#     # price = 100
-#     print("The new price is: ", price)  # 200
+def get_price():
+    print("The old price is: ", price)  # 200
+    # price = 100
+    print("The new price is: ", price)  # 200
 
 
-# get_price()
+get_price()
 
 
-# Case 2:
+# # Case 2:
 # price = 200
 
 
