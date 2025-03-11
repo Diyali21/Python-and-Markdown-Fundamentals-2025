@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      #cool {
+        color: plum;
+      }
+
+      /* Class selector */
+      .fun {
+        color: skyblue;
+      }
+
+      /* Element selectors */
+      p {
+        color: crimson !important;
+        font-size: 48px;
+      }
+
+      /* Lower overrides above - Cascading */
+      p {
+        color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="cool" class="fun" style="color: teal">This is super cool</p>
+  </body>
+</html>
+
+<!--  
+Specificity
+
+!important (UN)  > inline (president)  >   id (mom) > class (father)  > p (element) (You)
+
+-->
