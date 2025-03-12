@@ -1,6 +1,5 @@
 # Exercise 1: Data Sorting and Ranking
 # Setup Code
-from math import prod
 
 students = [
     {"name": "Alice", "grade": 88},

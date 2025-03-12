@@ -10,6 +10,7 @@
         /* Centering */
         display: grid;
         place-content: center;
+        /* 1vh -> 1% of screen height */
         min-height: 100vh;
         margin: 0px;
       }
@@ -19,25 +20,27 @@
         width: 350px;
         background: crimson;
         /* Animation */
-        transition: 4s all;
+        /* timing function ease-in-out */
+        transition: 1s all ease-in-out;
+        transition: 1s all cubic-bezier(0.55, 0.21, 0.84, 1.73);
       }
 
-      /* .box:hover {
+      .box:hover {
         background: skyblue;
-        transform: scale(1.1) translateY(-40px);
+        transform: scale(1.1) translateY(-40px) translateX(40px);
         cursor: pointer;
       }
 
       .box:active {
         background: teal;
         transform: scale(0.9);
-      } */
+      }
 
-      .box:hover {
+      /* .box:hover {
         background: skyblue;
         transform: scale(1.5) rotate(360deg);
         border-radius: 50%;
-      }
+      } */
     </style>
   </head>
   <body>
@@ -45,8 +48,8 @@
   </body>
 </html>
 
-<!-- Pseudo class
-Fake class that CSS assigns when Use interacts
+<!-- Pseudo class 
+Fake class that CSS attaches to the element when the User interacts
 
 :fake-class
 Targets Mouseover
