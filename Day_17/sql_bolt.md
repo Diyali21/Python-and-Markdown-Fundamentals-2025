@@ -379,8 +379,90 @@
 
    ```sql
    SELECT role, SUM(years_employed) AS Num_Years_Engineers FROM employees
-   WHERE role = "Engineer"
-   GROUP BY role;
+   WHERE role = "Engineer";
    ```
 
    ![alt text](image-11.png)
+
+## Exercise 12 — Tasks
+
+1. Find the number of movies each director has directed
+
+   ```sql
+   SELECT director, count(director) AS Num_Directed FROM movies
+   GROUP BY director;
+   ```
+
+2. Find the total domestic and international sales that can be attributed to each director
+   ```sql
+   SELECT movies.director, SUM(boxoffice.domestic_sales + boxoffice.international_sales) AS Total_Sales
+   FROM movies
+   INNER JOIN boxoffice ON movies.id = boxoffice.movie_id
+   GROUP BY director;
+   ```
+   ![alt text](image-12.png)
+
+## Exercise 13 — Tasks
+
+1. Add the studio's new production, Toy Story 4 to the list of movies (you can use any director)
+
+   ```sql
+   INSERT INTO movies
+   VALUES (4, "Toy Story 4", "John Lasseter", 2025, 120 )
+   ```
+
+2. Toy Story 4 has been released to critical acclaim! It had a rating of 8.7, and made 340 million domestically and 270 million internationally. Add the record to the BoxOffice table.
+
+   ```sql
+   INSERT INTO boxoffice
+   VALUES (4, 8.7, 340000000, 270000000)
+   ```
+
+   ![alt text](image-13.png)
+
+## Exercise 14 — Tasks
+
+1. The director for A Bug's Life is incorrect, it was actually directed by John Lasseter
+
+   ```sql
+   SELECT *
+   FROM movies
+   WHERE year > 2005;
+   ```
+
+   ```sql
+   UPDATE movies
+   SET director = "John Lasseter"
+   WHERE id = 2;
+   ```
+
+2. The year that Toy Story 2 was released is incorrect, it was actually released in 1999
+
+   ```sql
+   SELECT *
+   FROM movies
+   WHERE id = 3;
+   ```
+
+   ```SQL
+   UPDATE movies
+   SET year = 1999
+   WHERE id = 3;
+   ```
+
+3. Both the title and director for Toy Story 8 is incorrect! The title should be "Toy
+   Story 3" and it was directed by Lee Unkrich
+
+   ```sql
+   SELECT *
+   FROM movies
+   WHERE id = 11;
+   ```
+
+   ```sql
+   UPDATE movies
+   SET title = "Toy Story 3", director = "Lee Unkrich"
+   WHERE id = 11;
+   ```
+
+   ![alt text](image-14.png)
