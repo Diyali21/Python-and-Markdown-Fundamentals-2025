@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Mentor | News homepage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .main-container {
+        display: grid;
+        place-content: center;
+        min-height: 100vh;
+        margin: 0px;
+      }
+      .top-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .w {
+        font-weight: 800;
+        font-size: 30px;
+      }
+
+      .menu {
+        list-style: none;
+        padding: 0px;
+        display: flex;
+        gap: 24px;
+        font-size: 15px;
+        font-family: Inter, sans-serif;
+        font-weight: 400;
+      }
+
+      .middle-container {
+        padding: 0%;
+        display: flex;
+        flex-wrap: wrap;
+        font-family: Inter, sans-serif;
+        font-weight: 700;
+        justify-content: space-between;
+      }
+      img {
+        height: 400px;
+        width: 1000px;
+      }
+      .bright-future {
+        width: 300px;
+        font-size: 50px;
+        font-weight: 800;
+      }
+
+      p {
+        font-size: 15px;
+        margin-top: 30px;
+
+        font-weight: 400;
+        width: 350px;
+        line-height: 3.5vh;
+      }
+
+      h4 {
+        font-family: Inter, sans-serif;
+        text-transform: uppercase;
+      }
+
+      .read-more-container {
+        margin-left: 650px;
+        background-color: hsl(5, 85%, 63%);
+        height: 15px;
+        width: 200px;
+        padding: 20px;
+        text-align: center;
+        letter-spacing: 1vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="top-container">
+        <div class="w">
+          <h1>W.</h1>
+        </div>
+        <ul class="menu">
+          <li>Home</li>
+          <li>New</li>
+          <li>Popular</li>
+          <li>Trending</li>
+          <li>Categories</li>
+        </ul>
+      </div>
+      <img src="./assets/images/image-web-3-desktop.jpg" alt="" />
+      <div class="middle-container">
+        <h1 class="bright-future">The Bright Future of Web 3.0?</h1>
+        <div class="empty-block"></div>
+        <p>
+          We dive into the next evolution of the web that claims to put the
+          power of the platforms back into the hands of the people. But is it
+          really fulfilling its promise?
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
