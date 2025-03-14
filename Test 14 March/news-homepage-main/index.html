@@ -11,9 +11,13 @@
       rel="stylesheet"
     />
     <style>
+      .main-container {
+        display: grid;
+        place-content: center;
+        min-height: 100vh;
+        margin: 0px;
+      }
       .top-container {
-        margin: 100px;
-        font-family: Inter, sans-serif;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -21,6 +25,7 @@
 
       .w {
         font-weight: 800;
+        font-size: 30px;
       }
 
       .menu {
@@ -29,21 +34,69 @@
         display: flex;
         gap: 24px;
         font-size: 15px;
+        font-family: Inter, sans-serif;
+        font-weight: 400;
+      }
+
+      .middle-container {
+        display: flex;
+        flex-wrap: wrap;
+        font-family: Inter, sans-serif;
+        font-weight: 700;
+        justify-content: space-between;
+      }
+      img {
+        height: 400px;
+        width: 1000px;
+      }
+      .bright-future {
+        width: 200px;
+        font-size: 40px;
+        font-weight: 800;
+      }
+
+      p {
+        font-weight: 400;
+        width: 350px;
+      }
+      .read-more {
+        display: flex;
+        justify-content: center;
+        background-color: hsl(5, 85%, 63%);
+        width: 200px;
+        height: 50px;
+      }
+      h4 {
+        font-family: Inter, sans-serif;
+        text-transform: uppercase;
       }
     </style>
   </head>
   <body>
-    <div class="top-container">
-      <div class="w">
-        <h1>W.</h1>
+    <div class="main-container">
+      <div class="top-container">
+        <div class="w">
+          <h1>W.</h1>
+        </div>
+        <ul class="menu">
+          <li>Home</li>
+          <li>New</li>
+          <li>Popular</li>
+          <li>Trending</li>
+          <li>Categories</li>
+        </ul>
       </div>
-      <ul class="menu">
-        <li>Home</li>
-        <li>New</li>
-        <li>Popular</li>
-        <li>Trending</li>
-        <li>Categories</li>
-      </ul>
+      <img src="./assets/images/image-web-3-desktop.jpg" alt="" />
+      <div class="middle-container">
+        <h1 class="bright-future">The Bright Future of Web 3.0?</h1>
+        <div class="empty-block"></div>
+        <p>
+          We dive into the next evolution of the web that claims to put the
+          power of the platforms back into the hands of the people. But is it
+          really fulfilling its promise?
+        </p>
+      </div>
+      <h4 class="read-more">Read More</h4>
     </div>
   </body>
 </html>
