@@ -239,3 +239,148 @@
    ```
 
 ![alt text](image-5.png)
+
+## Exercise 6 — Tasks
+
+1. Find the domestic and international sales for each movie
+   ```sql
+   SELECT * FROM movies
+   INNER JOIN boxoffice
+   on movies.id = boxoffice.movie_id;
+   ```
+2. Show the sales numbers for each movie that did better internationally rather than domestically
+
+   ```sql
+   SELECT * FROM movies
+   INNER JOIN boxoffice
+   on movies.id = boxoffice.movie_id
+   WHERE boxoffice.international_sales > boxoffice.domestic_sales;
+   ```
+
+3. List all the movies by their ratings in descending order
+
+   ```sql
+   SELECT * FROM movies
+   INNER JOIN boxoffice
+   on movies.id = boxoffice.movie_id
+   ORDER BY boxoffice.rating DESC;
+   ```
+
+   ![alt text](image-6.png)
+
+## Exercise 7 — Tasks
+
+1. Find the list of all buildings that have employees
+
+   ```sql
+   SELECT DISTINCT building FROM employees;
+   ```
+
+2. Find the list of all buildings and their capacity
+
+   ```sql
+   SELECT * FROM buildings;
+   ```
+
+3. List all buildings and the distinct employee roles in each building (including empty buildings)
+   ```sql
+   SELECT DISTINCT role, building_name FROM buildings
+   LEFT JOIN employees
+   ON buildings.building_name = employees.building;
+   ```
+   ![alt text](image-7.png)
+
+## Exercise 8 — Tasks
+
+1. Find the name and role of all employees who have not been assigned to a building
+
+   ```sql
+   SELECT name, role FROM employees
+   WHERE building IS NULL;
+   ```
+
+2. Find the names of the buildings that hold no employees
+   ```sql
+   SELECT * FROM buildings
+   LEFT JOIN employees ON employees.building = buildings.building_name
+   WHERE name IS NULL;
+   ```
+
+![alt text](image-8.png)
+
+## Exercise 9 — Tasks
+
+1. List all movies and their combined sales in millions of dollars
+
+   ```sql
+   SELECT movies.title, (boxoffice.domestic_sales + boxoffice.international_sales) / 1000000 AS Sum_Sales
+   FROM movies
+   INNER JOIN boxoffice ON movies.id = boxoffice.movie_id;
+   ```
+
+2. List all movies and their ratings in percent
+
+   ```sql
+   SELECT movies.title, boxoffice.rating * 10 AS Rating_Percent
+   FROM movies
+   INNER JOIN boxoffice ON movies.id = boxoffice.movie_id;
+   ```
+
+3. List all movies that were released on even number years
+
+   ```sql
+   SELECT movies.title, movies.year FROM movies
+   WHERE movies.year % 2 = 0;
+   ```
+
+![alt text](image-9.png)
+
+## Exercise 10 — Tasks
+
+1. Find the longest time that an employee has been at the studio
+
+   ```sql
+   SELECT MAX(years_employed) AS Longest_Time FROM employees;
+   ```
+
+2. For each role, find the average number of years employed by employees in that role
+
+   ```sql
+   SELECT role, AVG(years_employed) AS Average_Years FROM employees
+   GROUP BY role;
+   ```
+
+3. Find the total number of employee years worked in each building
+
+   ```sql
+   SELECT building, SUM(years_employed) AS Sum_Employees FROM employees
+   GROUP BY building;
+   ```
+
+![alt text](image-10.png)
+
+## Exercise 11 — Tasks
+
+1. Find the number of Artists in the studio (without a HAVING clause)
+
+   ```sql
+   SELECT COUNT(role) AS Num_Artists FROM employees
+   WHERE role = "Artist";
+   ```
+
+2. Find the number of Employees of each role in the studio
+
+   ```sql
+   SELECT role, COUNT(name) AS Num_Role FROM employees
+   GROUP BY role;
+   ```
+
+3. Find the total number of years employed by all Engineers
+
+   ```sql
+   SELECT role, SUM(years_employed) AS Num_Years_Engineers FROM employees
+   WHERE role = "Engineer"
+   GROUP BY role;
+   ```
+
+   ![alt text](image-11.png)
