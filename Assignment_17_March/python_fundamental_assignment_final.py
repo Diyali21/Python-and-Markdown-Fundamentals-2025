@@ -362,7 +362,9 @@ students = [
 
 
 # def sort_artifact(artifacts):
-#     sorted_artifacts = list(sorted(artifacts, key=lambda artifact: artifact["age"]))
+#     sorted_artifacts = list(
+#         sorted(artifacts, key=lambda artifact: (artifact["age"], artifact["power"]))
+#     )
 #     print(sorted_artifacts)
 
 
@@ -440,16 +442,18 @@ students = [
 
 # -----------------------------------------------------------------------------------------------
 # # Q20
-# tasks = [
-#     {"id": 1, "priority": "High", "completed": False},
-#     {"id": 2, "priority": "Low", "completed": True},
-#     {"id": 3, "priority": "Medium", "completed": False},
-# ]
+tasks = [
+    {"id": 1, "priority": "High", "completed": False},
+    {"id": 2, "priority": "Low", "completed": True},
+    {"id": 3, "priority": "Medium", "completed": False},
+]
 
 
-# def sort_task(tasks, key_sort):
-#     sorted_tasks = list(sorted(tasks, key=key_sort))
-#     print(sorted_tasks)
+def sort_task(tasks):
+    sorted_tasks = list(
+        sorted(tasks, key=lambda task: (task["completed"], task["priority"]))
+    )
+    print(sorted_tasks)
 
 
-# sort_task(tasks, lambda task: task["completed"])
+sort_task(tasks)
