@@ -439,7 +439,7 @@ students = [
 # tag4(data, "tag1")
 
 # -----------------------------------------------------------------------------------------------
-# Q20
+# # Q20
 # tasks = [
 #     {"id": 1, "priority": "High", "completed": False},
 #     {"id": 2, "priority": "Low", "completed": True},
@@ -447,9 +447,9 @@ students = [
 # ]
 
 
-# def sort_task(tasks):
-#     sorted_tasks = list(sorted(tasks, key=lambda task: task["completed"]))
+# def sort_task(tasks, key_sort):
+#     sorted_tasks = list(sorted(tasks, key=key_sort))
 #     print(sorted_tasks)
 
 
-# sort_task(tasks)
+# sort_task(tasks, lambda task: task["completed"])
