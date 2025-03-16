@@ -440,16 +440,16 @@ students = [
 
 # -----------------------------------------------------------------------------------------------
 # Q20
-tasks = [
-    {"id": 1, "priority": "High", "completed": False},
-    {"id": 2, "priority": "Low", "completed": True},
-    {"id": 3, "priority": "Medium", "completed": False},
-]
+# tasks = [
+#     {"id": 1, "priority": "High", "completed": False},
+#     {"id": 2, "priority": "Low", "completed": True},
+#     {"id": 3, "priority": "Medium", "completed": False},
+# ]
 
 
-def sort_task(tasks):
-    sorted_tasks = list(sorted(tasks, key=lambda task: task["completed"]))
-    print(sorted_tasks)
+# def sort_task(tasks):
+#     sorted_tasks = list(sorted(tasks, key=lambda task: task["completed"]))
+#     print(sorted_tasks)
 
 
-sort_task(tasks)
+# sort_task(tasks)

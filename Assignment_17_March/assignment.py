@@ -79,17 +79,6 @@
 
 # -----------------------------------------------------------------------------------------------
 # Q4
-# category_totals = {}
-
-# for transaction in transactions:
-#     category = transaction["category"]
-#     amount = transaction["amount"]
-
-#     if category in category_totals:
-#         category_totals[category] += amount
-#     else:
-#         category_totals[category] = amount
-
 
 # orders = [
 #     {
