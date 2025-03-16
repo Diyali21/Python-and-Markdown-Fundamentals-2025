@@ -1,3 +1,29 @@
+# Q1
+# students = [
+#     {"name": "Alice", "grade": 88},
+#     {"name": "Bob", "grade": 75},
+#     {"name": "Charlie", "grade": 93},
+# ]
+
+# # sorted_spells = list(sorted(spells, key=lambda spell: spell[1], reverse=True))
+
+# sorted_students = list(
+#     sorted(students, key=lambda student: student["grade"], reverse=True)
+# )
+# for i in range(len(sorted_students)):
+#     sorted_students[i]["rank"] = i + 1
+
+
+# # Way 1
+# # rank = 1
+
+# # for student in sorted_students:
+# #     student["rank"] = rank
+# #     rank += 1
+
+# print(sorted_students)
+
+# -----------------------------------------------------------------------------------------------
 # Q2:
 
 # employees = [{"id": 1, "name": "Alice"}, {"id": 2, "name": "Bob"}]
@@ -50,6 +76,45 @@
 
 
 # print(electronics2())
+
+# -----------------------------------------------------------------------------------------------
+# Q4
+# category_totals = {}
+
+# for transaction in transactions:
+#     category = transaction["category"]
+#     amount = transaction["amount"]
+
+#     if category in category_totals:
+#         category_totals[category] += amount
+#     else:
+#         category_totals[category] = amount
+
+
+# orders = [
+#     {
+#         "order_id": 1,
+#         "items": [{"product": "A", "quantity": 2}, {"product": "B", "quantity": 3}],
+#     },
+#     {
+#         "order_id": 2,
+#         "items": [{"product": "A", "quantity": 1}, {"product": "C", "quantity": 1}],
+#     },
+# ]
+
+# product_qty = {}
+
+# for item in orders:
+#     for product in item["items"]:
+#         prod_name = product["product"]
+#         qty = product["quantity"]
+
+#         if prod_name in product_qty:
+#             product_qty[prod_name] += qty
+#         else:
+#             product_qty[prod_name] = qty
+
+# print(product_qty)
 
 # -----------------------------------------------------------------------------------------------
 # Q5
@@ -124,6 +189,67 @@
 # print(formatted_titles)
 
 # -----------------------------------------------------------------------------------------------
+# Q10
+
+# class WizardDuel:
+#     def __init__(self, name1, name2, health1, health2):
+#         self.name1 = name1
+#         self.name2 = name2
+#         self.health1 = health1
+#         self.health2 = health2
+
+#     def cast_spell(self, name, points):
+#         if self.name1 == name:
+#             self.health1 -= points
+
+#         if self.name2 == name:
+#             self.health2 -= points
+
+#     def get_winner(self):
+#         if self.health1 > self.health2:
+#             return f"After a duel between {self.name1} and {self.name2}, {self.name1} wins with {self.health1} health points left."
+#         elif self.health2 > self.health1:
+#             return f"After a duel between {self.name1} and {self.name2}, {self.name2} wins with {self.health2} health points left."
+#         else:
+#             return (
+#                 f"After a duel between {self.name1} and {self.name2}, there was a tie."
+#             )
+
+
+# # Example usage:
+# duel = WizardDuel("Harry", "Draco", 50, 40)
+# duel.cast_spell("Harry", 10)
+# duel.cast_spell("Draco", 5)
+# winner = duel.get_winner()
+# print(winner)
+
+### Expected Output
+# After a duel between Harry and Draco, Harry wins with 10 health points left.
+
+# -----------------------------------------------------------------------------------------------
+# # Q11
+# class PotionError(Exception):
+#     pass
+
+
+# def brew_potion(potion_name, ingredients):
+#     correct_ingredients = ["Rose Petal", "Unicorn Hair"]
+
+#     for ingredient in ingredients:
+#         if ingredient not in correct_ingredients:
+#             raise PotionError(
+#                 f"'{ingredient}' is not a valid ingredient for the Love Potion."
+#             )
+
+#     print(f"All ingredients are valid ingredients")
+
+
+# try:
+#     brew_potion("Love Potion", ["Rose Petal", "Unicorn Hair", "Eye of Newt"])
+# except PotionError as e:
+#     print(f"Caught PotionError: {e}")
+# -----------------------------------------------------------------------------------------------
+
 # Q12
 # library = [
 #     {"title": "Unfogging the Future", "author": "Cassandra Vablatsky"},
@@ -134,6 +260,41 @@
 
 # bagshot_books = [book for book in library if book["author"] == "Bathilda Bagshot"]
 # print(bagshot_books)
+
+# -----------------------------------------------------------------------------------------------
+# Q13
+# house_points = [
+#     {"house": "Gryffindor", "points": 35},
+#     {"house": "Slytherin", "points": 50},
+#     {"house": "Gryffindor", "points": 60},
+#     {"house": "Slytherin", "points": 40},
+# ]
+# Expected Task: Aggregate points for each house and print the total.
+
+# Your solution here:
+# house_totals = ...
+
+# print(house_totals)
+
+# house_total_points = {}
+
+# for house_point in house_points:
+#     house = house_point["house"]
+#     points = house_point["points"]
+
+#     if house in house_total_points:
+#         house_total_points[house] += points
+#     else:
+#         house_total_points[house] = points
+
+# print(house_total_points)
+
+
+### Expected Output
+# {
+#     "Gryffindor": 95,
+#     "Slytherin": 90
+# }
 
 # -----------------------------------------------------------------------------------------------
 # Q14
@@ -170,6 +331,30 @@
 # unicorn.sound()  # Should print "Neigh" output - Silver-maned the Unicorn says: Neigh!
 
 # -----------------------------------------------------------------------------------------------
+# Q15
+# artifacts = [
+#     {"name": "Cloak of Invisibility", "age": 657, "power": 9.5},
+#     {"name": "Elder Wand", "age": 1000, "power": 10},
+#     {"name": "Resurrection Stone", "age": 800, "power": 7},
+# ]
+# Expected Task: Sort the artifacts first by age, then by power, using a lambda function.
+
+# Your solution here:
+# sorted_artifacts = ...
+
+# Expected Output
+# print(sorted_artifacts)
+
+# sorted_artifacts = list(sorted(artifacts, key=lambda artifact: artifact["age"]))
+# print(sorted_artifacts)
+
+# [
+#     {"name": "Cloak of Invisibility", "age": 657, "power": 9.5},
+#     {"name": "Resurrection Stone", "age": 800, "power": 7},
+#     {"name": "Elder Wand", "age": 1000, "power": 10}
+# ]
+
+# -----------------------------------------------------------------------------------------------
 # Q16
 # wizard = {"name": "Albus Dumbledore", "title": "Headmaster", "house": "Gryffindor"}
 
@@ -177,8 +362,23 @@
 # print(profile)
 
 # -----------------------------------------------------------------------------------------------
+# Q17
+# adopters = [("Harry", "Phoenix"), ("Hermione", "House Elf")]
+# creatures = [("Fawkes", "Phoenix"), ("Dobby", "House Elf"), ("Buckbeak", "Hippogriff")]
+
+# adopt_creature = []
+
+# for adopter in adopters:
+#     filtered = filter(lambda creature: adopter[1] == creature[1], creatures)
+#     map_ac = " ".join(list(map(lambda creature: creature[0], filtered)))
+
+#     adopt_creature.append((adopter[0], map_ac))
+
+# print(adopt_creature)
+# -----------------------------------------------------------------------------------------------
+
 # Q18
-ingredients = ["Moonstone", "Silver Dust", "Dragon Blood"]
+# ingredients = ["Moonstone", "Silver Dust", "Dragon Blood"]
 # Expected Task: For each pair of ingredients, print out the unique potion they produce.
 
 # Your solution here:
@@ -188,12 +388,12 @@ ingredients = ["Moonstone", "Silver Dust", "Dragon Blood"]
 # Combining Moonstone and Dragon Blood produces a unique potion.
 # Combining Silver Dust and Dragon Blood produces a unique potion.
 
-potential_potions = f"""Combining {ingredients[0]} and {ingredients[1]} produces a unique potion
-Combining {ingredients[0]} and {ingredients[2]} produces a unique potion
-Combining {ingredients[1]} and {ingredients[2]} produces a unique potion
-"""
+# potential_potions = f"""Combining {ingredients[0]} and {ingredients[1]} produces a unique potion
+# Combining {ingredients[0]} and {ingredients[2]} produces a unique potion
+# Combining {ingredients[1]} and {ingredients[2]} produces a unique potion
+# """
 
-print(potential_potions)
+# print(potential_potions)
 
 # -----------------------------------------------------------------------------------------------
 # Q19
@@ -209,3 +409,27 @@ print(potential_potions)
 #     if "tag1" in info["tags"]:
 #         info["tags"].append("tag4")
 #     print(info)
+
+# -----------------------------------------------------------------------------------------------
+# Q20
+# tasks = [
+#     {"id": 1, "priority": "High", "completed": False},
+#     {"id": 2, "priority": "Low", "completed": True},
+#     {"id": 3, "priority": "Medium", "completed": False},
+# ]
+# Expected Task: Sort the tasks by "completed" status (False first) and then by priority ("High", "Medium", "Low").
+
+# Your solution here:
+# sorted_tasks = ...
+
+# Expected Output
+# print(sorted_tasks)
+
+# sorted_false = list(sorted(tasks, key=lambda task: task["completed"]))
+# print(sorted_false)
+
+# [
+#     {"id": 1, "priority": "High", "completed": False},
+#     {"id": 3, "priority": "Medium", "completed": False},
+#     {"id": 2, "priority": "Low", "completed": True}
+# ]
