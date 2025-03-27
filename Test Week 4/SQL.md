@@ -50,6 +50,18 @@ SELECT * FROM artworks WHERE title LIKE '%Night%' ORDER BY title;
 
 2.  Write a query to display each artist with the total number of artworks they have created, including artists with no artworks, sorted in descending order by the artwork count.
 
+```sql
+SELECT artists.name, COUNT(artworks.title) as 'Number of artworks' FROM artists LEFT JOIN artworks ON artists.artist_id = artworks.artist_id GROUP BY artists.name ORDER BY COUNT(artworks.title) DESC;
+```
+
 3.  Write a query to display the average price of artworks for each genre, only including genres where the average price is above 800000, sorted by genre name.
 
+```sql
+SELECT genre, AVG(price) AS 'Average Price' FROM artworks GROUP BY genre HAVING AVG(price) > 800000 ORDER BY genre;
+```
+
 4.  Write a query to list all artists who do not have any artworks in the artworks table.
+
+```sql
+SELECT artists.name, COUNT(artworks.title) as 'Number of artworks' FROM artists LEFT JOIN artworks ON artists.artist_id = artworks.artist_id GROUP BY artists.name HAVING COUNT(artworks.title) = 0;
+```
