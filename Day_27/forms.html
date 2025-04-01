@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .form-element {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .form-container {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <form class="form-container">
+      <div class="form-element">
+        <label for="name">Name </label>
+        <input type="text" placeholder="Lana" id="name" required />
+      </div>
+      <div class="form-element">
+        <label for="email">Email </label>
+        <input type="email" placeholder="lana@gmail.com" id="email" required />
+      </div>
+      <div class="form-element">
+        <label for="password">Password </label>
+        <input type="password" placeholder="Secret" id="password" />
+      </div>
+      <div class="form-element">
+        <label for="age">Age </label>
+        <input type="number" min="18" max="60" placeholder="20" id="age" />
+      </div>
+      <div class="form-element">
+        <p>Gender</p>
+        <label><input type="radio" name="gender" />Male</label>
+        <label><input type="radio" name="gender" />Female</label>
+      </div>
+      <div class="form-element">
+        <p>Hobbies</p>
+        <label><input type="checkbox" name="hobby" />Chess</label>
+        <label
+          ><input type="checkbox" name="hobby" disabled checked />Karate</label
+        >
+        <label><input type="checkbox" name="hobby" />Badminton</label>
+        <label><input type="checkbox" name="hobby" />Anime</label>
+      </div>
+
+      <select name="" id="">
+        <option value="CT">Cape Town</option>
+        <option value="DL">Delhi</option>
+        <option value="BKP">Brakpan</option>
+        <option value="AKB">Akihabara</option>
+      </select>
+
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
